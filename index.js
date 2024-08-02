@@ -6,6 +6,11 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 
 
+app.get('/', (req, res) => {
+    res.send('Backend is running');
+});
+
+
 app.post('/bfhl', (req, res) => {
     const { data } = req.body;
     const userId = "Dedipya_20022003";
